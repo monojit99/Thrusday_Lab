@@ -3,20 +3,20 @@ class Amstrong {
 
     public static void main(String[] args) {
 
-        int number, originalNumber, remainder, result = 0; /declare and initialze variables
+        int num, origNum, rem, result = 0; //declare and initialze variables
 	System.out.println("enter the number:"); //take user input
 	Scanner sc=new Scanner(System.in);
-	number=sc.nextInt();
-        originalNumber = number;
+	num=sc.nextInt();
+        origNum = num;
 
-        while (originalNumber != 0)
+        while (origNum != 0)
         {
-            remainder = originalNumber % 10; //take remainder
+            rem = origNum % 10; //take remainder
             result += Math.pow(remainder, 3); //take math module for cubic expression
-            originalNumber /= 10;
+            origNum /= 10;
         }
 
-        if(result == number)
+        if(result == num)
             System.out.println(number + " is an Armstrong number."); //check the number is amstrong or not
         else
             System.out.println(number + " is not an Armstrong number.");
